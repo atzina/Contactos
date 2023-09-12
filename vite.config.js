@@ -5,11 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
 
-  resolve: {
-    alias: {
-      // ...otros alias...
-      'bootstrap/dist/css/bootstrap.css': require.resolve('bootstrap/dist/css/bootstrap.css'),
-    },
-  },
 
 })
