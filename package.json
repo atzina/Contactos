@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "formik": "^2.4.4",
+    "formik-material-ui": "^4.0.0-alpha.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
