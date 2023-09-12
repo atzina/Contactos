@@ -1,14 +1,14 @@
 import React from 'react';
-import contacts from './MockApi.jsx';
 import PropTypes from 'prop-types';
 
-function ContactList({ contacts, onDelete }) {
+function ContactList({ contacts, onDelete, onUpdate }) {
   return (
     <ul>
       {contacts.map((contact) => (
         <li key={contact.id}>
           {contact.name} - {contact.email}
           <button onClick={() => onDelete(contact.id)}>Eliminar</button>
+          <button onClick={() => onUpdate(contact)}>Actualizar</button>
         </li>
       ))}
     </ul>
@@ -18,6 +18,7 @@ function ContactList({ contacts, onDelete }) {
 ContactList.propTypes = {
     contacts: PropTypes.array.isRequired, // Valida que 'contacts' sea un array requerido
     onDelete: PropTypes.func.isRequired, // Valida que 'onDelete' sea una función requerida
+    onUpdate: PropTypes.func.isRequired,
   };
 
 export default ContactList;
