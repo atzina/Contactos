@@ -1,13 +1,21 @@
+body {
+  background-image: url('../src/assets/flota-cel.PNG');
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: center; 
+  background-repeat: repeat;
 }
 
 .contenedor-principal {
-  color:bisque;
+  color:black;
   border-color:black;
+  max-width: 500px;
+  background-color:beige;
+  padding: 30px;
+  border-radius: 10px;
 }
 
 .contenedor-principal h1 {
