@@ -5,7 +5,7 @@ function ContactList({ contacts, onDelete, onUpdate }) {
   return (
     <ul>
       {contacts.map((contact) => (
-        <li key={contact.id}>
+        <li className='list' key={contact.id}>
           {contact.name} - {contact.email}
           <button onClick={() => onDelete(contact.id)}>Eliminar</button>
           <button onClick={() => onUpdate(contact)}>Actualizar</button>

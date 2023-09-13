@@ -1,6 +1,7 @@
 body {
   background-image: url('../src/assets/flota-cel.PNG');
 }
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -31,11 +32,11 @@ body {
   margin: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.list {
+  list-style: none;
 }
+
+
 
 .card {
   padding: 2em;
@@ -43,4 +44,23 @@ body {
 
 .read-the-docs {
   color: #888;
+}
+
+@media (max-width: 420px){
+  .contenedor-principal{
+    padding: 15px ;
+    margin: 0;
+    font-size: medium;
+  }
+  #root{
+    padding: 0%;
+  }
+
+  .contenedor-principal h1 {
+    font-size: 30px;
+  }
+
+  .contenedor-princiapl li {
+    font-size:small;
+  }
 }
