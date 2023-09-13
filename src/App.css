@@ -1,5 +1,7 @@
 body {
   background-image: url('../src/assets/flota-cel.PNG');
+  width: 100%;
+  background-repeat: repeat-x;
 }
 
 #root {
@@ -7,7 +9,7 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center; 
-  background-repeat: repeat;
+  
 }
 
 .contenedor-principal {
@@ -28,9 +30,10 @@ body {
 }
 
 button {
-  padding: 0.1em 0.5em;
+  padding: 0.5em 0.3em;
   font-size: 0.9em;
-  order: 1px solid #ccc;
+  border: 1px solid #888;
+  margin:1px;
 }
 
 .div-form {
