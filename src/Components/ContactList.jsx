@@ -3,15 +3,19 @@ import PropTypes from 'prop-types';
 
 function ContactList({ contacts, onDelete, onUpdate }) {
   return (
-    <ul>
-      {contacts.map((contact) => (
-        <li className='list' key={contact.id}>
-          {contact.name} - {contact.email}
-          <button onClick={() => onDelete(contact.id)}>Eliminar</button>
-          <button onClick={() => onUpdate(contact)}>Actualizar</button>
-        </li>
-      ))}
-    </ul>
+    <div className='conteiner-contacts'>
+      <ul>
+        {contacts.map((contact) => (
+          <li className='list' key={contact.id}>
+            {contact.name} - {contact.email} &nbsp; 
+            <button onClick={() => onDelete(contact.id)}>Eliminar</button>
+            <button onClick={() => onUpdate(contact)}>Actualizar</button>
+          </li>
+            
+
+        ))}
+      </ul>
+    </div>
   );
 }
 
