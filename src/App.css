@@ -1,7 +1,7 @@
 body {
   background-image: url('../src/assets/flota-cel.PNG');
   width: 100%;
-  background-repeat: repeat-x;
+  background-repeat: repeat;
 }
 
 #root {
