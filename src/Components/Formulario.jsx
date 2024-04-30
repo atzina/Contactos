@@ -6,7 +6,7 @@ function ContactForm({ onSubmit, onUpdate, contactToEdit }) {
     <>
         <h3>{contactToEdit ? 'Editar contacto' : 'Inserta un contacto nuevo'}</h3>
       <Formik
-        initialValues={{ name: contactToEdit?.name || '', email: contactToEdit?.email || '' }}
+        initialValues={{ name: contactToEdit?.name || '', email: contactToEdit?.email || '', num: contactToEdit?.num || '' }}
         onSubmit={(values, { resetForm }) => {
           if (contactToEdit) {
             // Si hay un contacto para editar, actualiza en lugar de agregar uno nuevo
@@ -21,6 +21,7 @@ function ContactForm({ onSubmit, onUpdate, contactToEdit }) {
         <Form>
           <Field type="text" name="name" placeholder="Nombre" />
           <Field type="email" name="email" placeholder="Correo electrónico" />
+          <Field type="tel" name="telefono" placeholder= "Teléfono"/>
           <button type="submit">{contactToEdit ? 'Actualizar' : 'Guardar'}</button>
         </Form>
       </Formik>
