@@ -49,24 +49,26 @@ function App() {
 
   return (
     <>
-      <div className="contenedor-principal">
-        <div className="title" >
-          <h1>Lista de Contactos</h1>
-        </div>
-        <div className="div-form">
-          <ContactForm onSubmit={addContact} onUpdate={updateContact} contactToEdit={contactToEdit}/>
-        </div>
-        <div>
-          <ContactList contacts={contactsData} onDelete={handleDelete} onUpdate={(contact) => setContactToEdit(contact)} />
+      <div className="fondo">
+        <div className="contenedor-principal">
+          <div className="title" >
+            <h1>Lista de Contactos</h1>
+          </div>
+          <div className="div-form">
+            <ContactForm onSubmit={addContact} onUpdate={updateContact} contactToEdit={contactToEdit}/>
+          </div>
+          <div>
+            <ContactList contacts={contactsData} onDelete={handleDelete} onUpdate={(contact) => setContactToEdit(contact)} />
 
-          {contactToDelete && (
-            <div className="confirmation-dialog">
-              <p>¿Seguro que quieres eliminar este contacto?</p>
-              <button onClick={confirmDelete}>Sí</button>
-              <button onClick={cancelDelete}>No</button>
-            </div>
-          )}
+            {contactToDelete && (
+              <div className="confirmation-dialog">
+                <p>¿Seguro/a que quieres eliminar este contacto?</p>
+                <button onClick={confirmDelete}>Sí</button>
+                <button onClick={cancelDelete}>No</button>
+              </div>
+            )}
 
+          </div>
         </div>
       </div>
     </>
