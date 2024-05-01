@@ -21,7 +21,7 @@ function ContactForm({ onSubmit, onUpdate, contactToEdit }) {
         <Form>
           <Field type="text" name="name" placeholder="Nombre" />
           <Field type="email" name="email" placeholder="Correo electrónico" />
-          <Field type="tel" name="telefono" placeholder= "Teléfono"/>
+          <Field type="tel" name="num" placeholder= "Teléfono"/>
           <button type="submit">{contactToEdit ? 'Actualizar' : 'Guardar'}</button>
         </Form>
       </Formik>

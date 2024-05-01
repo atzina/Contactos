@@ -8,6 +8,7 @@ function App() {
   const [contactsData, setContactsData] = useState(mockContacts);
   const [contactToDelete, setContactToDelete] = useState(null);
   const [contactToEdit, setContactToEdit] = useState(null);
+  const [lastId, setLastId] = useState(5);
 
   const handleDelete = (contactId) => {
     setContactToDelete(contactId);
@@ -26,10 +27,11 @@ function App() {
 
   const addContact = (newContact) => {
     const contactWithId = {
-      id: Math.random(),
+      id: lastId + 1,
       ...newContact,
     };
     setContactsData([...contactsData, contactWithId]);
+    setLastId(lastId + 1);
   };
 
   const updateContact = (updatedContact) => {
